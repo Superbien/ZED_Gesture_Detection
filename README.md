@@ -1,1 +1,1 @@
-# ZED_Gesture_Detection
+# ZED Gesture Detection

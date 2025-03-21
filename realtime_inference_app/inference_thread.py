@@ -125,14 +125,7 @@ class InferenceThread(threading.Thread):
                             if ct - self.last_gesture_time>= self.cooldown_time:
                                 ci,co = self.classifier.classify_gesture(f)
                                 if ci is not None:
-                                    inversion_map = {
-                                        "left_swipe":  "left_swipe",
-                                        "right_swipe": "right_swipe",
-                                        "up_swipe":    "down_swipe",
-                                        "down_swipe":  "up_swipe"
-                                    }
-                                    original_gname = self.processor.feature_extractor.class_labels[ci]
-                                    gname = inversion_map.get(original_gname, original_gname)
+                                    gname = self.processor.feature_extractor.class_labels[ci]
                                     if co>=0.5:
                                         self.app.log(f"GESTURE RECOGNIZED: {gname.upper()} ({co:.2f})")
                                         self.app.show_gesture_result(gname,co)

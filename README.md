@@ -47,7 +47,7 @@ Each gesture is represented as a **sequence of 7 frames × 70 features**, formin
 
 ### Model Architectures
 
-We implemented and benchmarked three models: LSTM, Transformer, Hybrid LSTM-Transformer
+We implemented and benchmarked three models: LSTM, Transformer, Hybrid LSTM-Transformer.
 
 ### Training Strategy
 
